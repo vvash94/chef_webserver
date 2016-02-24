@@ -60,13 +60,14 @@ dsc_script 'Delete-Current-Website' do
   code <<-EOH
   File Website-Del {
     DestinationPath = "C:\\inetpub\\wwwroot"
+    Type = "Directory"
     Ensure = "Absent"
     Recurse = $true
   }
   EOH
 end
 
-directory "C:\\inetpub\\wwwroot" 
+directory "C:\\inetpub\\wwwroot"
 
 dsc_script 'Extract-Artifacts' do
   code <<-EOH
