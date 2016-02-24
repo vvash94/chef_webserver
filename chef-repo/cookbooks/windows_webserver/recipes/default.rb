@@ -61,14 +61,14 @@ directory "C:\\inetpub\\wwwroot" do
   recursive true
 end
 
-#directory "C:\\inetpub\\wwwroot"
+directory "C:\\inetpub\\wwwroot"
 
-#dsc_script 'Extract-Artifacts' do
-#  code <<-EOH
-#  Archive Artifact {
-#      Ensure = "Present"
-#      Path = "C:\\MvcApplication2.zip"
-#      Destination = "C:\\inetpub\\wwwroot\\"
-#  }
-#  EOH
-#end
+dsc_script 'Extract-Artifacts' do
+  code <<-EOH
+  Archive Artifact {
+      Ensure = "Present"
+      Path = "C:\\MvcApplication2.zip"
+      Destination = "C:\\inetpub\\wwwroot\\"
+  }
+  EOH
+end
