@@ -56,15 +56,9 @@ dsc_script 'Download-Artifacts' do
   EOH
 end
 
-dsc_script 'Delete-Current-Website' do
-  code <<-EOH
-  File Website-Del {
-    DestinationPath = "C:\\inetpub\\wwwroot"
-    Type = "Directory"
-    Ensure = "Absent"
-    Recurse = $true
-  }
-  EOH
+directory "C:\\inetpub\\wwwroot" do
+  action :delete
+  recursive true
 end
 
 #directory "C:\\inetpub\\wwwroot"
