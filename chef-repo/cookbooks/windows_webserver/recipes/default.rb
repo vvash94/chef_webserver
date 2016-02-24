@@ -66,7 +66,7 @@ dsc_script 'Delete-Current-Website' do
   EOH
 end
 
-file "C:\\inetpub\\wwwroot" 
+directory "C:\\inetpub\\wwwroot" 
 
 dsc_script 'Extract-Artifacts' do
   code <<-EOH
