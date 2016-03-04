@@ -26,22 +26,6 @@ end
 
 dsc_script 'Download-Artifacts' do
   code <<-EOH
-  Script InstallAntivirus{
-    GetScript={ $true }
-    SetScript={
-      $source = "https://s3-us-west-1.amazonaws.com/ashishbucket/MvcApplication2.zip"
-      $destination = "C:\\MvcApplication2.zip"
-      Invoke-WebRequest $source -OutFile $destination
-    }
-    TestScript={
-      $false
-        }
-  }
-  EOH
-end
-
-dsc_script 'Download-Artifacts' do
-  code <<-EOH
   Script Download-Artifacts{
     GetScript={ $true }
     SetScript={
