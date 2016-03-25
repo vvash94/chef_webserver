@@ -1,4 +1,0 @@
-# WindowsMachineConfiguration
-
-TODO: Enter the cookbook description here.
-
