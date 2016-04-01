@@ -1,0 +1,7 @@
+DEPENDENCIES
+  WindowsMachineConfiguration
+    path: .
+    metadata: true
+
+GRAPH
+  WindowsMachineConfiguration (0.1.0)
